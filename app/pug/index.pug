@@ -1,0 +1,12 @@
+doctype html
+html(lang="en")
+  head
+    title Menu
+    link(rel="stylesheet" href="css/style.css")
+  body
+    .menu
+      label(class="menu__close-btn" for="close-btn")
+      input(type="checkbox", id="close-btn")
+      - var list = ["home", "about", "work", "services", "team", "contact"]
+          each item in list
+                li: a(href="#")= item
