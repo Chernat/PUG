@@ -1,0 +1,105 @@
+input[type="checkbox"] {
+  display: none;
+}
+
+.menu {
+  position: relative;
+  margin: 40px auto;
+  width: 260px;
+  background: $bg-menu;
+  padding: 30px 70px;
+
+  &__close-btn {
+    content: '';
+    position: absolute;
+    right: 30px;
+    top: 30px;
+    width: 20px;
+    height: 20px;
+    &::before {
+      content: '';
+      position: absolute;
+      right: 0;
+      top: 10px;
+      width: 20px;
+      height: 3px;
+      background: $close-btn;
+      transform: rotate(45deg);
+      transition: background .3s;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      right: 0;
+      top: 10px;
+      width: 20px;
+      height: 3px;
+      background: $close-btn;
+      transform: rotate(-45deg);
+      transition: background .3s;
+    }
+
+    &:hover {
+      cursor: pointer;
+      &::before{
+        background: $link-hover;
+      }
+
+      &::after {
+        background: $link-hover;
+      }
+    }
+  }
+
+  &__list{
+    list-style: none;
+    width: 120px;
+    margin: auto;
+    padding-top: 30px;
+    border-bottom: 2px solid #fff;
+  }
+
+  &__item {
+    padding-bottom: 50px;
+    font-size: 16px;
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+
+  &__line {
+    padding: 30px 0;
+  }
+
+  &__contacts {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 30px;
+
+    &-link {
+      padding-top: 5px;
+    }
+  }
+
+  &__social {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    list-style: none;
+    padding: 30px 0;
+
+    &-link {
+      padding: 4px 14px;
+      border: 1px solid #fff;
+      border-radius: 50%;
+      transition: background .3s;
+
+      &:hover {
+        background: $bg-link;
+        & a {
+          color: #fff;
+        }
+      }
+    }
+  }
+}
