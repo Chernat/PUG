@@ -2,16 +2,26 @@
 <html lang="en">
 <head>
   <title>Menu</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web">
 </head>
-<body>
-  <div class="menu"><label class="menu__close-btn" for="close-btn"></label><input type="checkbox" id="close-btn">
-    <li><a>home</a></li>
-    <li><a>about</a></li>
-    <li><a>work</a></li>
-    <li><a>services</a></li>
-    <li><a>team</a></li>
-    <li><a>contact</a></li>
+<body class="container">
+  <div class="menu"><label class="menu__close-btn" for="close-btn"><input type="checkbox" id="close-btn"></label>
+    <ul class="menu__list">
+      <li class="menu__item"><a href="#">home</a></li>
+      <li class="menu__item"><a href="#">about</a></li>
+      <li class="menu__item"><a href="#">work</a></li>
+      <li class="menu__item"><a href="#">services</a></li>
+      <li class="menu__item"><a href="#">team</a></li>
+      <li class="menu__item"><a href="#">contact</a></li>
+      <li class="menu__item"><a href="#">Logout</a></li>
+    </ul>
+    <div class="menu__contacts"><a class="menu__contacts-link" href="tel:9125551234">(912) 555-1234</a><a class="menu__contacts-link" href="mailto:office@website.com">office@website.com</a></div>
+    <ul class="menu__social">
+      <li class="menu__social-link"><a href="#">f</a></li>
+      <li class="menu__social-link"><a href="#">t</a></li>
+      <li class="menu__social-link"><a href="#">g</a></li>
+    </ul>
   </div>
 </body>
 </html>

@@ -2,11 +2,26 @@ doctype html
 html(lang="en")
   head
     title Menu
-    link(rel="stylesheet" href="css/style.css")
-  body
+    link(rel="stylesheet" href="css/main.css")
+    link(rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web")
+  body.container
     .menu
       label(class="menu__close-btn" for="close-btn")
-      input(type="checkbox", id="close-btn")
-      - var list = ["home", "about", "work", "services", "team", "contact"]
-          each item in list
-                li: a(href="#")= item
+        input(type="checkbox", id="close-btn")
+      ul.menu__list
+        - var menuList = ["home", "about", "work", "services", "team", "contact"]
+            each item in menuList
+                li.menu__item: a(href="#")= item
+        li.menu__item
+         - var user = { login: false }
+          if user.login == true
+            a(href="#") Login
+          else
+            a(href="#") Logout
+      .menu__contacts
+        a.menu__contacts-link(href="tel:9125551234") (912) 555-1234
+        a.menu__contacts-link(href="mailto:office@website.com") office@website.com
+      ul.menu__social
+        - var socialList = ["f", "t", "g"]
+            each item in socialList
+              li.menu__social-link: a(href="#")= item

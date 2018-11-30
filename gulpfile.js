@@ -38,14 +38,14 @@ gulp.task('pug', function() {
   .pipe(pug())
   .pipe(prettyHtml({ indent_size: 2, extra_liners:[] }))
   .pipe(gulp.dest('app'))
-  .pipe(browserSync.reload({stream: true}))
+  .pipe(browserSync.reload({stream: true}));
 });
 
 gulp.task('finished', ['sass'], function() {
   gulp.src('app/css/*.css')
-  .pipe(gulp.dest('dist/css'))
+    .pipe(gulp.dest('dist/css'));
   gulp.src('app/*.html')
-  .pipe(gulp.dest('dist/'))
+    .pipe(gulp.dest('dist/'));
   gulp.src('app/img')
-  .pipe(gulp.dest('dist/img'))
+    .pipe(gulp.dest('dist/img'));
 })
