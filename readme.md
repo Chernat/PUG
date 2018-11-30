@@ -1,3 +1,3 @@
 # PUG Menu
 
-[GitHubPages](https://chernat.github.io/Bicycle/)
+[GitHubPages](https://chernat.github.io/PUG/)
